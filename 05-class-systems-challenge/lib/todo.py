@@ -9,11 +9,14 @@ class Todo:
         # Side-effects:
         #   Sets the task property
         #   Sets the complete property to False
-        pass
+        self._task = task
+        self._complete = False
 
     def mark_complete(self):
         # Returns:
         #   Nothing
         # Side-effects:
         #   Sets the complete property to True
-        pass
+        if self._complete:
+            raise Exception("You've already marked this complete!")
+        self._complete = True

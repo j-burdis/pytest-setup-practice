@@ -1,6 +1,7 @@
 class TodoList:
     def __init__(self):
-        pass
+        self._incomplete_todos = []
+        self._complete_todos = []
 
     def add(self, todo):
         # Parameters:
@@ -9,21 +10,29 @@ class TodoList:
         #   Nothing
         # Side-effects:
         #   Adds the todo to the list of todos
-        pass
+        if todo._task in self.incomplete():
+            raise Exception("This is already in your todo list!")
+        self._incomplete_todos.append(todo)
 
     def incomplete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are not complete
-        pass
+        for todo in self._incomplete_todos:
+            if todo._complete == True:
+                self._complete_todos.append(todo)
+                self._incomplete_todos.remove(todo)
+        return [todo._task for todo in self._incomplete_todos]
 
     def complete(self):
         # Returns:
         #   A list of Todo instances representing the todos that are complete
-        pass
+        return [todo._task for todo in self._complete_todos]
 
     def give_up(self):
         # Returns:
         #   Nothing
         # Side-effects:
         #   Marks all todos as complete
-        pass
+        for todo in self._incomplete_todos:
+            todo.mark_complete()
+        self.incomplete()
