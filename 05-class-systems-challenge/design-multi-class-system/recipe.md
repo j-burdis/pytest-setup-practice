@@ -123,9 +123,7 @@ class TaskList:
         # self.task_list.append(task)
         pass
 
-    def mark_complete(self, task):
-        # Params:
-        #   instance variable of the task to be marked complete
+    def mark_complete(self):
         # Side effects:
         #   sets the value of the complete property to True
         # task.complete = True
