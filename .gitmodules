@@ -1,0 +1,3 @@
+[submodule "06-mocking-bites/06-mocking-bites/golden-square-in-python"]
+	path = 06-mocking-bites/06-mocking-bites/golden-square-in-python
+	url = https://github.com/j-burdis/pytest-setup-practice.git
