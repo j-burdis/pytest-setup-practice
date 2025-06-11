@@ -1,5 +1,3 @@
-# import requests
-
 class ActivitySuggester:
     def __init__(self, requester):  # requester is usually `requests`
         self.requester = requester
@@ -16,7 +14,10 @@ class ActivitySuggester:
 
 # Usage
 # =====
-# activity_suggester = ActivitySuggester()
+# THIS DOESN'T WORK IN PRACTICE AS THE API IS NO LONGER ACTIVE
+# import requests
+
+# activity_suggester = ActivitySuggester(requests)
 # activity_suggester.suggest() will return a different value every time
 
 # print(activity_suggester.suggest())
