@@ -9,19 +9,19 @@ class ActivitySuggester:
     # This method calls an 'API' on the internet to get a random activity.
     # An API is a way of allowing programs to request data from other programs.
     def _make_request_to_api(self):
-        response = self.requester.get("http://www.boredapi.com/api/activity")
+        response = self.requester.get("https://bored-api.appbrewery.com/random")
         return response.json()
 
 # Usage
 # =====
 # THIS DOESN'T WORK IN PRACTICE AS THE API IS NO LONGER ACTIVE
-# import requests
+import requests
 
-# activity_suggester = ActivitySuggester(requests)
+activity_suggester = ActivitySuggester(requests)
 # activity_suggester.suggest() will return a different value every time
 
-# print(activity_suggester.suggest())
+print(activity_suggester.suggest())
 # Why not: Learn how to use a french press
 
-# print(activity_suggester.suggest())
+print(activity_suggester.suggest())
 # Why not: Hold a video game tournament with some friends
